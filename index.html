@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ink &amp; Tone</title>
+<meta name="description" content="Learn Chinese one word at a time, on your lock screen, home screen and Apple Watch.">
+<link rel="icon" href="icon.png">
+<style>
+:root { --paper:#F6F2EA; --card:#FFFDF8; --ink:#1C1B19; --ink2:#5E5A52; --line:#E4DED2; --seal:#C23A2B; }
+@media (prefers-color-scheme: dark) {
+  :root { --paper:#15140F; --card:#201E19; --ink:#F2EEE6; --ink2:#B3AC9F; --line:#35322B; --seal:#E0604F; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink);
+  font:17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+header { display:flex; align-items:center; gap:14px; margin-bottom:28px; flex-wrap:wrap; }
+@media (max-width:520px) { nav { margin-left:0 !important; width:100%; } }
+header img { width:56px; height:56px; border-radius:13px; }
+header a { color:var(--ink); text-decoration:none; font-weight:700; font-size:20px; }
+nav { margin-left:auto; display:flex; gap:16px; font-size:15px; flex-wrap:wrap; }
+nav a { color:var(--ink2); font-weight:500; }
+a { color:var(--seal); }
+h1 { font-size:34px; line-height:1.2; margin:0 0 12px; }
+h2 { font-size:22px; margin:32px 0 10px; }
+table { width:100%; border-collapse:collapse; background:var(--card); border-radius:12px; overflow:hidden;
+  display:block; overflow-x:auto; }
+th, td { text-align:left; vertical-align:top; padding:10px 12px; border-bottom:1px solid var(--line); font-size:15px; }
+th { color:var(--ink2); font-weight:600; }
+td.size { white-space:nowrap; }
+code { font-size:14px; }
+.lead { font-size:20px; color:var(--ink2); margin:0 0 24px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:12px; margin:24px 0; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; }
+.card b { display:block; margin-bottom:4px; }
+.soon { display:inline-block; background:var(--ink); color:var(--paper); border-radius:12px; padding:12px 18px;
+  font-weight:600; }
+footer { margin-top:48px; font-size:14px; color:var(--ink2); }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <a href=""><img src="icon.png" alt=""></a>
+  <a href="">Ink &amp; Tone</a>
+  <nav><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="data/">Open data</a></nav>
+</header>
+
+<h1>Ink &amp; Tone</h1>
+<p class="lead">Learn Chinese one word at a time, on your lock screen, home screen and Apple Watch.</p>
+<p><span class="soon">On the App Store from 6 February 2027</span></p>
+<div class="cards">
+  <div class="card"><b>On your lock screen</b>The word you are learning, with its pinyin in tone colours.</div>
+  <div class="card"><b>Short daily sessions</b>Meaning, listening, tones and handwriting, scheduled with FSRS.</div>
+  <div class="card"><b>On your wrist</b>Today's words, reviews and writing on Apple Watch.</div>
+  <div class="card"><b>Private</b>No account, no ads, no tracking. Your progress stays on your devices.</div>
+</div>
+<p>HSK 1 and 2 are free. Pro unlocks every level, the larger widgets and the Apple Watch app.</p>
+
+<footer>© 2026 Isgandar Jafarli. HSK is a trademark of the Center for Language Education and Cooperation;
+Ink &amp; Tone is not affiliated with or endorsed by it.</footer>
+</main>
+</body>
+</html>
