@@ -37,26 +37,151 @@ code { font-size:14px; }
 .soon { display:inline-block; background:var(--ink); color:var(--paper); border-radius:12px; padding:12px 18px;
   font-weight:600; }
 footer { margin-top:48px; font-size:14px; color:var(--ink2); }
+main.wide { max-width:1040px; }
+.hero { display:grid; grid-template-columns:1.05fr 1fr; gap:24px; align-items:center; margin:8px 0 40px; }
+.hero h1 { font-size:52px; letter-spacing:-0.5px; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 0; }
+.chips span { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:6px 12px;
+  font-size:14px; font-weight:600; }
+.devices { position:relative; width:100%; max-width:440px; aspect-ratio:1 / 1.12; margin:0 auto; }
+.devices img { position:absolute; height:auto; filter:drop-shadow(0 18px 28px rgba(0,0,0,.22)); }
+.devices .p1 { width:48%; left:4%; top:3%; transform:rotate(-5deg); }
+.devices .p2 { width:48%; right:2%; top:0; transform:rotate(4deg); }
+.devices .w { width:36%; left:31%; bottom:0; transform:rotate(-2deg); }
+.stats { display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin:0 0 8px; }
+.stats div { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+.stats b { display:block; font-size:26px; line-height:1.2; }
+.stats span { font-size:14px; color:var(--ink2); }
+section { margin-top:56px; }
+section > p { max-width:640px; color:var(--ink2); }
+.shots { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; margin-top:20px; }
+.shots.watch { grid-template-columns:repeat(3, 1fr); max-width:720px; }
+figure { margin:0; text-align:center; }
+figure img { width:100%; height:auto; filter:drop-shadow(0 10px 18px rgba(0,0,0,.14)); }
+figcaption { margin-top:10px; font-size:14px; color:var(--ink2); line-height:1.4; }
+figcaption b { display:block; color:var(--ink); }
+.wideimg { width:100%; height:auto; border-radius:16px; margin-top:16px; }
+.plans { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:20px; }
+.plan { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px; }
+.plan.pro { border:2px solid var(--seal); }
+.plan h3 { margin:0 0 4px; font-size:20px; }
+.plan .price { color:var(--ink2); margin:0 0 12px; }
+.plan ul { margin:0; padding-left:20px; }
+.plan li { margin:4px 0; }
+@media (max-width:820px) {
+  .hero { grid-template-columns:1fr; }
+  .hero h1 { font-size:40px; }
+  .stats { grid-template-columns:repeat(2, 1fr); }
+  .shots { grid-template-columns:repeat(2, 1fr); gap:16px; }
+  .shots.watch { grid-template-columns:repeat(3, 1fr); gap:10px; }
+  .plans { grid-template-columns:1fr; }
+}
 </style>
 </head>
 <body>
-<main>
+<main class="wide">
 <header>
   <a href=""><img src="icon.png" alt=""></a>
   <a href="">Ink &amp; Tone</a>
   <nav><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="data/">Open data</a></nav>
 </header>
 
-<h1>Ink &amp; Tone</h1>
-<p class="lead">Learn Chinese one word at a time, on your lock screen, home screen and Apple Watch.</p>
-<p><span class="soon">On the App Store from 6 February 2027</span></p>
-<div class="cards">
-  <div class="card"><b>On your lock screen</b>The word you are learning, with its pinyin in tone colours.</div>
-  <div class="card"><b>Short daily sessions</b>Meaning, listening, tones and handwriting, scheduled with FSRS.</div>
-  <div class="card"><b>On your wrist</b>Today's words, reviews and writing on Apple Watch.</div>
-  <div class="card"><b>Private</b>No account, no ads, no tracking. Your progress stays on your devices.</div>
+<div class="hero">
+  <div>
+    <h1>Ink &amp; Tone</h1>
+    <p class="lead">Learn Chinese one word at a time, on your lock screen, home screen and Apple Watch.</p>
+    <p><span class="soon">On the App Store from 6 February 2027</span></p>
+    <div class="chips"><span>HSK 1 to 9</span><span>Free to start</span><span>iPhone and Apple Watch</span>
+      <span>Works offline</span></div>
+  </div>
+  <div class="devices">
+    <img class="p1" src="images/iphone-widgets-lock.png" alt="Lock screen with the word 朋友, péngyou, friend, and an example sentence">
+    <img class="p2" src="images/iphone-word.png" alt="The word page for 朋友 with meanings and sentences">
+    <img class="w" src="images/watch-carousel.png" alt="Apple Watch showing 朋友">
+  </div>
 </div>
-<p>HSK 1 and 2 are free. Pro unlocks every level, the larger widgets and the Apple Watch app.</p>
+
+<div class="stats">
+  <div><b>11,470</b><span>words from three HSK lists</span></div>
+  <div><b>15,193</b><span>real example sentences</span></div>
+  <div><b>3,034</b><span>characters with stroke order</span></div>
+  <div><b>3</b><span>HSK lists: 2026, 3.0 and 2.0</span></div>
+</div>
+
+<section>
+  <h2>A word wherever you look</h2>
+  <p>The word you are learning sits on your lock screen, home screen and watch face, so you see it dozens of
+  times a day without opening anything. Put the Sentence widget next to it to see how the word is used.</p>
+  <div class="shots">
+    <figure><img src="images/iphone-widgets-lock.png" alt="Lock screen widgets with 朋友 and its example sentence" loading="lazy"><figcaption><b>Lock screen</b>A word and its sentence every time you check the time</figcaption></figure>
+    <figure><img src="images/iphone-widgets-home.png" alt="Home screen widgets" loading="lazy"><figcaption><b>Home screen</b>Small and medium widgets</figcaption></figure>
+    <figure><img src="images/iphone-widgets-large.png" alt="Large home screen widget with 图书馆" loading="lazy"><figcaption><b>Large widget</b>Mark a word known or move on without opening the app</figcaption></figure>
+    <figure><img src="images/iphone-today.png" alt="Today screen" loading="lazy"><figcaption><b>Today</b>Your word of the day and today&#x27;s session</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>Short sessions that stick</h2>
+  <p>Each session mixes meaning, listening, tones and handwriting. A spaced repetition scheduler (FSRS) brings
+  every word back just before you would forget it.</p>
+  <div class="shots">
+    <figure><img src="images/iphone-learn.png" alt="A new word card for 喜欢" loading="lazy"><figcaption><b>New words</b>Meet it, hear it, see it in a sentence</figcaption></figure>
+    <figure><img src="images/iphone-tones.png" alt="A tones question for 喜欢" loading="lazy"><figcaption><b>Tones</b>Pick the right tone marks</figcaption></figure>
+    <figure><img src="images/iphone-writing.png" alt="A handwriting question" loading="lazy"><figcaption><b>Handwriting</b>Write it from memory</figcaption></figure>
+    <figure><img src="images/iphone-strokes.png" alt="Stroke order for 朋" loading="lazy"><figcaption><b>Stroke order</b>Watch, trace, then recall</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>See the tones</h2>
+  <p>Each tone has its own colour, so you can see the tones as well as hear them.</p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/tones-dark.png">
+    <img class="wideimg" src="images/tones-light.png" alt="The five tones in colour: 妈 mā, 麻 má, 马 mǎ, 骂 mà and 吗 ma" loading="lazy">
+  </picture>
+</section>
+
+<section>
+  <h2>On your wrist</h2>
+  <p>Today's words on the watch face, quick reviews, and the whole screen as your page for writing.</p>
+  <div class="shots watch">
+    <figure><img src="images/watch-face.png" alt="Watch face with Ink &amp; Tone complications" loading="lazy"><figcaption><b>Watch face</b>A word that changes every few minutes</figcaption></figure>
+    <figure><img src="images/watch-review.png" alt="Watch review card" loading="lazy"><figcaption><b>Review</b>Tap to reveal, then yes or no</figcaption></figure>
+    <figure><img src="images/watch-write.png" alt="Writing 朋 on the watch" loading="lazy"><figcaption><b>Write</b>Practise with your finger</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>Free to start</h2>
+  <div class="plans">
+    <div class="plan">
+      <h3>Free</h3>
+      <p class="price">No account, no ads</p>
+      <ul>
+        <li>HSK 1 and 2 in every word list</li>
+        <li>Every kind of question, stroke order and handwriting</li>
+        <li>Word and Today widgets for the lock screen and home screen</li>
+        <li>Progress, streaks, reminders and backups</li>
+      </ul>
+    </div>
+    <div class="plan pro">
+      <h3>Pro</h3>
+      <p class="price">€14.99 a year with a free first week, or €29.99 once. Local prices in other countries.</p>
+      <ul>
+        <li>Every HSK level, from 3 to 7–9</li>
+        <li>The Sentence widget and the bigger home screen widgets</li>
+        <li>The Apple Watch app and its reviews complication</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Private by design</h2>
+  <p>Ink &amp; Tone works offline and collects nothing. There is no account, no advertising and no tracking,
+  and your progress stays on your devices. Read the <a href="privacy/">privacy policy</a>, or see
+  <a href="data/">where the words and sentences come from</a>.</p>
+</section>
 
 <footer>© 2026 Isgandar Jafarli. HSK is a trademark of the Center for Language Education and Cooperation;
 Ink &amp; Tone is not affiliated with or endorsed by it.</footer>
